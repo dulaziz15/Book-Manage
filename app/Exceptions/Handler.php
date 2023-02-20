@@ -43,8 +43,10 @@ class Handler extends ExceptionHandler
     public function register()
     {
         $this->renderable(function (NotFoundHttpException $e, $request) {
-            if($request->is('/api/*')){
-                return response()->json(['message' => 'object Not Found'], status:404);
+            if ($request->is('api/*')) {
+                return response()->json([
+                    'message' => 'Request anda salah ! '
+                ], 404);
             }
         });
     }
