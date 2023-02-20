@@ -5,6 +5,7 @@ namespace App\Exceptions;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use App\Exceptions\InvalidOrderException;
 
 class Handler extends ExceptionHandler
 {
@@ -47,6 +48,14 @@ class Handler extends ExceptionHandler
                 return response()->json([
                     'message' => 'Request anda salah ! '
                 ], 404);
+            }
+        });
+        $this->renderable(function (InvalidOrderException $e, $request) {
+            return response()->view('errors.500', [], 500);
+            if ($request->is('api/*')) {
+                return response()->json([
+                    'message' => 'server bermasalah ! '
+                ], 500);
             }
         });
     }

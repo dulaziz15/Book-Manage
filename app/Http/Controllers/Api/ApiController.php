@@ -32,14 +32,16 @@ class ApiController extends Controller
                     ->orWhere('tahun', 'like', "$query")
                     ->orWhere('kode_rak', 'like', "%$query%")
                     ->get();
-            // dd($books)
-            if(!$books){
-                abort(code:404, message:'Query Not Found');
-            }
-
-                return response()->json([
-                    'data' => $books
-                ]);
+                    // dd($books);
+                    if($books->isEmpty()) {
+                        return response()->json([
+                            'message' => 'Data tidak ditemukan',
+                        ], 404);
+                    } else {
+                        return response()->json([
+                            'data' => $books,
+                        ]);
+                    }
     }
 
     public function cari(Request $request){
