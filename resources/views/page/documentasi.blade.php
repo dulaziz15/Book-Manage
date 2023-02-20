@@ -23,7 +23,17 @@
                     <div class="col-lg-1">
                     </div>
                     <div class="col-lg-11 ">
-                        <img src="{{ url('img/buku.png') }}" alt="" width="700px">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <h4>Hasil Jika Request Benar</h4>
+                                <img src="{{ url('img/buku.png') }}" alt="" width="400px">
+                            </div>
+                            <div class="col-lg-6">
+                                <h4>Jika Request Salah</h4>
+                                <img src="{{ url('img/buku_salah.png') }}" alt="" width="400px">
+                            </div>
+                        </div>
+                        
                     </div>
                 </div>
                 <div class="row my-4">
@@ -38,8 +48,16 @@
                     <div class="col-lg-1">
                     </div>
                     <div class="col-lg-11 ">
-                        <img src="{{ url('img/rak.png') }}" alt="" width="700px">
-                    </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <h4>Hasil Jika Request Benar</h4>
+                                <img src="{{ url('img/rak.png') }}" alt="" width="400px">
+                            </div>
+                            <div class="col-lg-6">
+                                <h4>Jika Request Salah</h4>
+                                <img src="{{ url('img/buku_salah.png') }}" alt="" width="400px">
+                            </div>
+                        </div>                    </div>
                 </div>
                 <div class="row my-5">
                     <div class="col-lg-1">
@@ -73,8 +91,16 @@
                     <div class="col-lg-1">
                     </div>
                     <div class="col-lg-11 ">
-                        <img src="{{ url('img/cari.png') }}" alt="" width="700px">
-                    </div>
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <h4>jika Data Ditemukan</h4>
+                                <img src="{{ url('img/cari.png') }}" alt="" width="400px">
+                            </div>
+                            <div class="col-lg-6">
+                                <h4>Jika Data Tidak Ditemukan</h4>
+                                <img src="{{ url('img/cari_salah.png') }}" alt="" width="400px">
+                            </div>
+                        </div>                       </div>
                 </div>
             </div>
         </div>
